@@ -1,0 +1,206 @@
+/* Baseline CSS */
+body {
+    font-family: Arial, sans-serif;
+    color:white;
+    background-color: #0f172a;
+    margin: 0;
+    padding: 20px;
+    justify-content: center;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid red;
+    padding: 10px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+
+}
+nav {
+    flex: 1;
+    display:flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 80px;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid red;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+/*Possible Re-use Page-by-Page CSS------------------------------------------*/
+
+.homecard {
+    background-color: #1e293b;
+    border: 2px solid #1e293b;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+    gap: 40px; 
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+
+}
+
+.card-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0197c9;
+    color: white;
+    padding: 20px 40px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+.card-button:hover {
+    background-color: #000fcc;
+}
+
+
+.page-title {
+    margin-top: 20px;
+    text-align: left;
+    color: white;
+    margin-left: 20px;
+}
+
+
+
+/* END OF POSSIBLE REUSE------------------------------------------------------- */
+
+
+/* Page Specific---Home Page */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.home-featured-row {
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.featured-card {
+    background-color: #1e293b;
+    border: 2px solid #1e293b;
+    border-radius: 8px;
+    padding: 15px;
+    width: 450px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+
+}
+
+.about-card {
+    background-color: #1e293b;
+    border: 2px solid #1e293b;
+    border-radius: 8px;
+    padding: 15px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    height: 320px;
+    
+}
+
+
+
+/* Page Specific---Cuisines Page--------------------------------------- */
+
+
+.cuisine-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+
+
+.cuisine-card {
+    display: flex;
+    align-items: flex-start;
+    background-color: #1e293b;
+    border: 2px solid #1e293b;
+    border-radius: 8px;
+    padding: 15px;
+    width: 90%;
+    
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    margin: 20px auto;
+    height: 400px;
+    gap: 20px;
+}
+
+
+.cuisine-image {
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cuisine-content {
+    width: 60%;
+    flex: 1;
+    text-align: left;
+
+}
+.cuisine-content h2 {
+    margin-bottom: 80px;
+    
+}
+.cuisine-content p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+.cuisine-content .card-button {
+    margin-top: 28px;
+    margin-left: 600px;
+}
+
+
+
+
+
+
+
+
+
+
