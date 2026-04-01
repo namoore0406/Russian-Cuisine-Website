@@ -1,45 +1,53 @@
-/* Baseline CSS */
-body {
-    font-family: Arial, sans-serif;
-    color:white;
-    background-color: #0f172a;
+/* RESET + BASE */
+* {
     margin: 0;
-    padding: 20px;
-    justify-content: center;
-
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #0f172a;
+    line-height: 1.6;
+}
+
+/* HEADER */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid red;
-    padding: 10px;
+    padding: 10px 20px;
+    flex-wrap: wrap;
 }
 
 .logo {
-    width: 150px;
-    height: 150px;
-
+    width: 120px;
+    height: auto;
 }
+
+/* NAV */
 nav {
     flex: 1;
-    display:flex;
-    justify-content: center;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 80px;
+    gap: 40px;
+    flex-wrap: wrap;
 }
+
 nav a {
     text-decoration: none;
     color: white;
-    font-size: 35px;
+    font-size: 30px;
+    padding: 10px;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
@@ -47,152 +55,343 @@ footer {
     margin-top: 20px;
 }
 
-
-
-
-
-
-
-/*Possible Re-use Page-by-Page CSS------------------------------------------*/
-
-.homecard {
+/* GENERAL CARDS */
+.homecard,
+.featured-card,
+.about-card,
+.cuisine-card {
     background-color: #1e293b;
-    border: 2px solid #1e293b;
     border-radius: 8px;
     padding: 20px;
-    margin-bottom: 20px;
-    width: 90%;
-    gap: 40px; 
+    width: 100%;
+    max-width: 1100px;
     margin: 20px auto;
-    text-align: center;
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-
 }
 
+/* BUTTON */
 .card-button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: #0197c9;
     color: white;
-    padding: 20px 40px;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 6px;
     margin-top: 15px;
+    font-size: 16px;
 }
+
 .card-button:hover {
     background-color: #000fcc;
 }
 
-
-.page-title {
-    margin-top: 20px;
-    text-align: left;
-    color: white;
-    margin-left: 20px;
-}
-
-
-
-/* END OF POSSIBLE REUSE------------------------------------------------------- */
-
-
-/* Page Specific---Home Page */
+/* HOME */
 .home-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    text-align: center;
+    padding: 20px;
 }
-
 
 .home-featured-row {
     display: flex;
-    gap: 150px;
-    justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
-    margin: 10px 0;
+    justify-content: center;
 }
 
 .featured-card {
-    background-color: #1e293b;
-    border: 2px solid #1e293b;
-    border-radius: 8px;
-    padding: 15px;
-    width: 450px;
+    width: 100%;
+    max-width: 320px;
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-
 }
 
-.about-card {
-    background-color: #1e293b;
-    border: 2px solid #1e293b;
+.featured-image {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
-    padding: 15px;
-    width: 90%;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    height: 320px;
     
 }
 
+.featured-image:hover {
+    transform: scale(1.02);
+}
 
 
-/* Page Specific---Cuisines Page--------------------------------------- */
+/* ABOUT */
+.about-card {
+    text-align: center;
+}
 
-
+/* CUISINE PAGE */
 .cuisine-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
+    gap: 20px;
+    padding: 20px;
 }
-
-
-
 
 .cuisine-card {
     display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* IMAGE */
+.cuisine-image {
+    width: 40%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* CONTENT */
+.cuisine-content {
+    flex: 1;
+}
+
+.cuisine-content h2 {
+    margin-bottom: 10px;
+}
+
+.cuisine-content p {
+    font-size: 16px;
+}
+/* 🌐 Culture Page*/
+
+
+
+.culture-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.culture-card {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
     align-items: flex-start;
     background-color: #1e293b;
-    border: 2px solid #1e293b;
     border-radius: 8px;
-    padding: 15px;
-    width: 90%;
-    
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    margin: 20px auto;
-    height: 400px;
-    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 
-.cuisine-image {
-    width: 30%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
+.culture-card h2 {
+    text-align: center;
 }
 
-.cuisine-content {
-    width: 60%;
-    flex: 1;
+.culture-card p {
     text-align: left;
-
 }
-.cuisine-content h2 {
-    margin-bottom: 80px;
+
+
+.culture-image {
+    width: 35%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+
+.culture-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.culture-content h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.culture-content p {
+    font-size: 16px;
+    text-align: left;
+}
+
+/* 🌐 RECIPE PAGES */
+
+/* RECIPE PAGE */
+.recipe-page {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+
+.recipe-title {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+
+.recipe-layout {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+
+.recipe-image-wrap {
+    flex: 2.2;
+}
+
+.recipe-image {
+    width: 100%;
+    height: 420px; 
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+
+.recipe-image:hover {
+    transform: scale(1.02);
+}
+
+
+.recipe-ingredients {
+    flex: 1;
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.recipe-ingredients h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 2px solid red;
+    padding-bottom: 8px;
+}
+
+
+.recipe-ingredients ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.recipe-ingredients li {
+    margin-bottom: 10px;
+    padding-left: 18px;
+    position: relative;
+}
+
+
+.recipe-ingredients li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: red;
+}
+
+
+.recipe-instructions {
+    margin-top: 45px;
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.05);
     
 }
-.cuisine-content p {
-    font-size: 20px;
-    line-height: 1.5;
+
+.recipe-instructions h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid red;
+    padding-bottom: 8px;
 }
-.cuisine-content .card-button {
-    margin-top: 28px;
-    margin-left: 600px;
+
+.recipe-instructions p {
+    margin-bottom: 15px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.recipe-instructions li {
+    margin-bottom: 18px;
+}
+
+.recipe-instructions ol {
+    padding-left: 25px;
+    margin-top: 10px;
+}
+
+
+
+
+
+/* 🌐 CONTACT PAGE */
+
+.form-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #1e293b;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.review-form label {
+    font-weight: bold;
+}
+
+.review-form input,
+.review-form textarea,
+.review-form select {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #0f172a;
+    color: white;
+}
+
+.review-form input:focus,
+.review-form textarea:focus,
+.review-form select:focus {
+    outline: 2px solid #0197c9;
+}
+
+.review-form button {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0197c9;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.review-form button:hover {
+    background-color: #000fcc;
 }
 
 
@@ -204,3 +403,77 @@ footer {
 
 
 
+
+
+
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .home-featured-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cuisine-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cuisine-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cuisine-content {
+        width: 100%;
+    }
+
+    .about-card {
+        height: auto; /* fixes your overflow issue */
+    }
+
+     .recipe-image {
+        height: auto;
+    }
+}
+
+/* 📱 SMALL PHONES */
+@media (max-width: 480px) {
+    nav a {
+        font-size: 14px;
+    }
+
+    .card-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .culture-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .culture-image {
+        width: 100%;
+        max-width: 100%;
+    }
+}
